@@ -32,8 +32,8 @@ if [ $# -eq 5 ]; then
         for subject in "${subject_list[@]}"; do
             echo 'Heuristic file exists, generating BIDS dataset : ' $subject
             echo 'Create qsub submission and log directory for : ' $subject
-
-            anon_subject=$(python /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/anon_id.py $subject);
+            
+            anon_subject=$(python $anonimize_file $subject);
 
             #remove old conversion heuristics
             heuristics_directory=$output_directory/.heudiconv/$anon_subject
@@ -61,7 +61,7 @@ else
         echo 'Heuristic file does not exist, generating heuristics : ' $subject
         echo 'Create qsub submission and log directory for : ' $subject
 
-        anon_subject=$(python /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/anon_id.py $subject);
+        anon_subject=$(python $anonimize_file $subject);
 
         #remove old conversion heuristics
         heuristics_directory=$output_directory/.heudiconv/$anon_subject
