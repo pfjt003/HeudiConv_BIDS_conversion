@@ -18,7 +18,7 @@ subject_list=$3
 anonimize_file=$4
 
 IFS=', ' read -a subject_list <<< "$subject_list"
-
+working_directory=$(pwd)
 
 if [ $# -eq 5 ]; then
 #if test -f "$heuristic_file"; then
@@ -46,7 +46,7 @@ if [ $# -eq 5 ]; then
             qsub    -l h_rss=4G \
                     -o ${log_folder}/output_BIDS_${anon_subject}.out \
                     -e ${log_folder}/error_BIDS_${anon_subject}.err \
-                    /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/convert_with_heuristics.sh \
+                    $working_directory/convert_with_heuristics.sh \
                     $dicom_directory \
                     $output_directory \
                     $subject \
@@ -74,7 +74,7 @@ else
         qsub    -l h_rss=4G \
                 -o ${log_folder}/output_heuristics_${anon_subject}.out \
                 -e ${log_folder}/error_heuristics_${anon_subject}.err \
-                /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/generate_heuristics.sh \
+                $working_directory/generate_heuristics.sh \
                 $dicom_directory \
                 $output_directory \
                 $subject \
