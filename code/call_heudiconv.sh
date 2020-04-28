@@ -18,7 +18,7 @@ subject_list=$3
 anonimize_file=$4
 
 IFS=', ' read -a subject_list <<< "$subject_list"
-working_directory=$(pwd)
+working_directory=`dirname $0`
 
 if [ $# -eq 5 ]; then
 #if test -f "$heuristic_file"; then
