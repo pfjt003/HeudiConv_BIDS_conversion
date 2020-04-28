@@ -15,6 +15,6 @@ def anon_id(orig_id):
 if __name__ == '__main__':
     orig_id = sys.argv[1]
     if orig_id == 'list':
-        print ' '.join(sorted(idmap.keys()))
+        print (' '.join(sorted(idmap.keys()))
     else:
         print anon_id(orig_id)
