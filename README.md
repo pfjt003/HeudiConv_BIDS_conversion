@@ -15,23 +15,23 @@ source /usr/local/apps/psycapps/config/conda_bash_update
 - Template
 
 ```bash
-bash /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/call_heudiconv.sh <Dicom_Folder> <Output_Folder> <Subject_list> <Anonymization_script> 
+bash <code_folder>/call_heudiconv.sh <Dicom_Folder> <Output_Folder> <Subject_list> <Anonymization_script> 
 
 ```
 - Example
 
 ```bash
-bash /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/Sample_BIDS_Dataset '202002040947_19800101XXXX' /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/anon_id.py 
+bash /MRIWork/MRI-Scratch/HeudiConv_BIDS_conversion/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/Sample_BIDS_Dataset '202002040947_19800101XXXX' /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/anon_id.py 
 
 ```
 
 # Generate the dataset 
 
 ```bash
-bash /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/call_heudiconv.sh <Dicom_Folder> <Output_Folder> <Subject_list> <Anonymization_script> <heuristic_file>
+bash <code_folder>/call_heudiconv.sh <Dicom_Folder> <Output_Folder> <Subject_list> <Anonymization_script> <heuristic_file>
 
 ```
 
 ```
-bash /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/Sample_BIDS_Dataset '202002040947_19800101XXXX' /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/anon_id.py /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/heuristic_template.py
+bash /MRIWork/MRI-Scratch/HeudiConv_BIDS_conversion/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/Sample_BIDS_Dataset '202002040947_19800101XXXX' /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/anon_id.py /MRIWork/MRI-Scratch/Create_BIDS_dataset/code/heuristic_template.py
 ```
