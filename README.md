@@ -2,10 +2,10 @@
 Repository having codes written using heudiconv for conversion of dicoms to BIDS 
 
 
-# Update Python for using git on the cluster
+# Update Python for using heudiconv and git on the cluster
 
 ```bash
-source /usr/local/apps/psycapps/config/conda_bash_update
+source /usr/local/apps/psycapps/config/conda_bash_update heudiconv
 ```
 
 # Open another new terminal and run the following command templates:
