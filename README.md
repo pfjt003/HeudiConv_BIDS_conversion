@@ -20,7 +20,8 @@ bash <code_folder>/call_heudiconv.sh <Dicom_Folder> <Output_Folder> <Subject_lis
 ```
 - Example
 
-``` bash /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/PGR_Seminar_2020/ayan_sengupta/Sample_BIDS_Dataset '202002040947_19800101XXXX' /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/anon_id.py 
+```bash
+bash /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/PGR_Seminar_2020/ayan_sengupta/Sample_BIDS_Dataset '202002040947_19800101XXXX' /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/anon_id.py 
 ```
 
 # Generate the dataset 
@@ -33,7 +34,8 @@ bash <code_folder>/call_heudiconv.sh <Dicom_Folder> <Output_Folder> <Subject_lis
 ```
 - Example
 
-``` bash /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/PGR_Seminar_2020/ayan_sengupta/Sample_BIDS_Dataset '202002040947_19800101XXXX' /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/anon_id.py /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/heuristic_template.py
+```bash
+bash /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/call_heudiconv.sh /MRIRaw/MRIRaw07/Demo/ /MRIWork/MRI-Scratch/PGR_Seminar_2020/ayan_sengupta/Sample_BIDS_Dataset '202002040947_19800101XXXX' /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/anon_id.py /usr/local/apps/psycapps/HeudiConv_BIDS_conversion/code/heuristic_template.py
 ```
 
 
