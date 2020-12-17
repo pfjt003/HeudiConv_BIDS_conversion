@@ -35,18 +35,18 @@ def infotodict(seqinfo):
     subindex: sub index within group
     """
     anatomical = create_key('sub-{subject}/{session}/anat/sub-{subject}_T1w')
-    functional = create_key('sub-{subject}/{session}/func/sub-{subject}_task-sound_run-{item:02d}_bold')
-    retmap = create_key('sub-{subject}/{session}/func/sub-{subject}_task-retmap_run-{item:02d}_bold')
+    functional = create_key('sub-{subject}/{session}/func/sub-{subject}_task-dating_run-{item:02d}_bold')
+    localizer = create_key('sub-{subject}/{session}/func/sub-{subject}_localizer')
 
-    info = {anatomical: [], functional: [], retmap: []}
+    info = {anatomical: [], functional: [], localizer: []}
     
     for idx, s in enumerate(seqinfo):
 #        if (s.dim1 == 320) and (s.dim2 == 320) and ('t1_fl2d_tra' in s.protocol_name):
 #            info[t1w].append(s.series_id)
         if ('t1_mpr_sag_iso' in s.protocol_name):
             info[anatomical].append(s.series_id)
-        if ('MB-EPI_2iso_Experiment' in s.protocol_name):
+        if ('MB_2x2x2_Dating' in s.protocol_name):
             info[functional].append(s.series_id)
-        if ('MB-EPI_2iso_RetMap' in s.protocol_name):
-            info[retmap].append(s.series_id)
+        if ('localizer' in s.protocol_name):
+            info[localizer].append(s.series_id)
     return info
