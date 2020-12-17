@@ -71,7 +71,7 @@ else
         log_folder=$output_directory/logs/$anon_subject
         mkdir -p $log_folder
 
-        qsub    -l h_rss=4G \
+        qsub    -l h_rss=1G \
                 -o ${log_folder}/output_heuristics_${anon_subject}.out \
                 -e ${log_folder}/error_heuristics_${anon_subject}.err \
                 $working_directory/generate_heuristics.sh \
